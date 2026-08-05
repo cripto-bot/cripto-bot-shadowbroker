@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 ╔══════════════════════════════════════════════════════════════════════════════╗
-║                   GRAPHLANG GHOST MODE — LEVEL 3 EVASION                    ║
+║                   GHOST MODE — LEVEL 3 EVASION                    ║
 ║         "The network doesn't know you exist. The AI sees nothing."          ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 
@@ -605,7 +605,7 @@ def demo_ghost_mode():
     """Demonstrate Ghost Mode — complete network invisibility."""
     print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
-║                   GRAPHLANG GHOST MODE — LEVEL 3 DEMO                       ║
+║                   GHOST MODE — LEVEL 3 DEMO                       ║
 ║     "The AI monitoring this network detects nothing unusual."               ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 """)

@@ -31,7 +31,7 @@ ARCHITECTURE:
   │     (DNS responses, NTP, CDN headers, TLS certs)        │
   │     Never initiates connection → no C2 beacon            │
   │                                                         │
-  │  2. GRAPHLANG DISCOVER ENGINE                           │
+  │  2. DISCOVER ENGINE                           │
   │     Given target intent → finds exploit chains           │
   │     215 patterns × merge_graphs() = novel combos        │
   │                                                         │
@@ -520,7 +520,7 @@ def demo():
 
     # ─── TEST 2: Exploit Chain Discovery ───
     print(f"\n{'═' * 70}")
-    print("TEST 2: GRAPHLANG EXPLOIT CHAIN DISCOVERY")
+    print("TEST 2: EXPLOIT CHAIN DISCOVERY")
     print("═" * 70)
 
     for intent in ["rce", "data_access", "exfiltrate", "privilege_escalation"]:

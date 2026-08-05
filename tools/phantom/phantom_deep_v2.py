@@ -141,7 +141,7 @@ class UniversalProtocolParser:
 
 
 # ═══════════════════════════════════════════════════════════════════
-# GRAPHLANG IR → PROTOCOL SYNTHESIZER
+# PROTOCOL SYNTHESIZER
 # ═══════════════════════════════════════════════════════════════════
 
 class ToProtocol:
@@ -285,7 +285,7 @@ class DeepPhantomV2:
 def demo():
     print("""
 ╔══════════════════════════════════════════════════════════════════╗
-║    DEEP PHANTOM V2 — GRAPHLANG IR CARRIER TRANSLATION           ║
+║    DEEP PHANTOM V2 — PROTOCOL CARRIER TRANSLATION           ║
 ║  "Every protocol byte passes through  merge engine"    ║
 ╚══════════════════════════════════════════════════════════════════╝
 """)

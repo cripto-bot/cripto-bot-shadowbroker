@@ -15,7 +15,7 @@ SHADOWBROKER DATA FEEDS (60+):
   GDELT Events, News Feeds, Prediction Markets, SAR Ground Change,
   Amtrak/DigiTraffic Trains, UAP Sightings, Wastewater, +30 more
 
-GRAPHLANG FUSION:
+FUSION:
   Every data point → normalized to GraphLang IR (12 kinds)
   merge_graphs() finds connections across feeds
   One target → ALL correlated data in milliseconds
@@ -262,7 +262,7 @@ class FusionEngine:
 def demo():
     print("""
 ╔══════════════════════════════════════════════════════════════════╗
-║                   GOD'S EYE — POWERED BY GRAPHLANG              ║
+║                   GOD'S EYE —               ║
 ║     "ShadowBroker feeds × GraphLang IR = Total Awareness"       ║
 ╚══════════════════════════════════════════════════════════════════╝
 """)
@@ -351,7 +351,7 @@ def demo():
             print(f"     [{dp.feed:<18}] {dp.entity_id:<25} {ph['distance_km']:.1f}km away")
 
     if result["cross_feed_correlations"]:
-        print(f"\n  🔗 GRAPHLANG CROSS-FEED CORRELATIONS:")
+        print(f"\n  🔗 CROSS-FEED CORRELATIONS:")
         for corr in result["cross_feed_correlations"][:8]:
             print(f"     {corr['feed_a']}::{corr['entity_a']} ↔ "
                   f"{corr['feed_b']}::{corr['entity_b']} "

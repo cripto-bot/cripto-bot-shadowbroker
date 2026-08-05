@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 ╔══════════════════════════════════════════════════════════════════════════════╗
-║                 GRAPHLANG DEEP PHANTOM — COVERT CHANNEL LAYER              ║
+║                 DEEP PHANTOM — COVERT CHANNEL LAYER              ║
 ║            "They don't know you're looking. They see nothing."             ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 
@@ -89,7 +89,7 @@ from phantom import (
 
 
 # ═══════════════════════════════════════════════════════════════════════════
-# GRAPHLANG IR → CARRIER PROTOCOL TRANSLATION
+# CARRIER PROTOCOL TRANSLATION
 # ═══════════════════════════════════════════════════════════════════════════
 
 """
@@ -765,7 +765,7 @@ def demo_all_carriers():
     """Demonstrate all covert channels encoding the same intent."""
     print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
-║              GRAPHLANG DEEP PHANTOM — COVERT CHANNEL DEMO                   ║
+║              DEEP PHANTOM — COVERT CHANNEL DEMO                   ║
 ║         "Same HTTP intent → 5 completely different wire protocols"          ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 """)

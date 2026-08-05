@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 ╔══════════════════════════════════════════════════════════════════════════════╗
-║                    GRAPHLANG SPECTRE — THE INVISIBLE ROUTING NETWORK        ║
+║                    SPECTRE — THE INVISIBLE ROUTING NETWORK        ║
 ║           "TOR without the directory. Onion routing without the onion."     ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 
@@ -731,7 +731,7 @@ def demo_spectre():
     """Demonstrate SPECTRE — the invisible routing network."""
     print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
-║                    GRAPHLANG SPECTRE — INVISIBLE ROUTING                   ║
+║                    SPECTRE — INVISIBLE ROUTING                   ║
 ║              "3 hops, 3 carriers, 0 detectable patterns"                   ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 """)
