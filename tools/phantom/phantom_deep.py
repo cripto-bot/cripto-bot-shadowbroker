@@ -63,7 +63,7 @@ CARRIER PROTOCOLS:
      - Statistical channel, no bytes to inspect
      - Looks like normal network jitter
 
-Author: Josué Argaña Silguero — GraphLang Deep Phantom
+Author: Josué Argaña Silguero — PHANTOM Deep
 """
 
 import os
@@ -919,7 +919,7 @@ def _carrier_cover_story(carrier: str) -> str:
 
 if __name__ == "__main__":
     import argparse
-    parser = argparse.ArgumentParser(description="GraphLang Deep Phantom — Covert Channel Layer")
+    parser = argparse.ArgumentParser(description="PHANTOM Deep — Covert Channel Layer")
     parser.add_argument("--all", action="store_true", help="Demo all carriers")
     parser.add_argument("--multi", action="store_true", help="Demo multi-carrier fragmentation")
     

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 ╔══════════════════════════════════════════════════════════════════════════════╗
-║           GRAPHLANG VPN — METHODOLOGY: 12 IR KINDS AS DESIGN TOOL          ║
+║           SHADOWBROKER SPECTRE — METHODOLOGY: STRUCTURAL PRIVACY LAYER          ║
 ║        "How I know it works before writing a single line of code"          ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 
@@ -730,7 +730,7 @@ def demo_methodology():
     
     print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
-║        GRAPHLANG VPN — LOS 5 PASOS DE LA METODOLOGÍA                       ║
+║        SHADOWBROKER SPECTRE — LOS 5 PASOS DE LA METODOLOGÍA                       ║
 ║     "Así sé que funciona antes de escribirlo"                               ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 """)

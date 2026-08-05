@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-DEEP PHANTOM V2 — Covert Channels powered by GraphLang IR.
+DEEP PHANTOM V2 — Covert Channels powered by  IR.
 
-Every carrier protocol (DNS, ICMP, WS, HTTP) is parsed into GraphLang IR.
+Every carrier protocol (DNS, ICMP, WS, HTTP) is parsed into  IR.
 merge_graphs() finds shared structure between carriers.
 Carrier translation = IR intermediate representation.
 
@@ -16,11 +16,11 @@ sys.path.insert(0, '/home/app/a')
 from core import Node, Graph, merge_graphs, build_graph
 
 # ═══════════════════════════════════════════════════════════════════
-# UNIVERSAL PROTOCOL PARSER: Any protocol → GraphLang IR
+# UNIVERSAL PROTOCOL PARSER: Any protocol →  IR
 # ═══════════════════════════════════════════════════════════════════
 
 class UniversalProtocolParser:
-    """Parses DNS, HTTP, ICMP, WebSocket packets into GraphLang IR."""
+    """Parses DNS, HTTP, ICMP, WebSocket packets into  IR."""
 
     def __init__(self):
         self._counter = 0
@@ -34,7 +34,7 @@ class UniversalProtocolParser:
         return nid
 
     def parse(self, data: bytes, carrier: str) -> Graph:
-        """Parse any carrier packet → GraphLang IR."""
+        """Parse any carrier packet →  IR."""
         if carrier == "dns":
             return self._parse_dns(data)
         elif carrier == "http":
@@ -144,8 +144,8 @@ class UniversalProtocolParser:
 # GRAPHLANG IR → PROTOCOL SYNTHESIZER
 # ═══════════════════════════════════════════════════════════════════
 
-class GraphLangToProtocol:
-    """Synthesizes protocol bytes FROM GraphLang IR."""
+class ToProtocol:
+    """Synthesizes protocol bytes FROM  IR."""
 
     def __init__(self):
         self._rng = random.Random()
@@ -205,35 +205,35 @@ class GraphLangToProtocol:
 
 
 # ═══════════════════════════════════════════════════════════════════
-# DEEP PHANTOM V2 — GraphLang IR carrier translation
+# DEEP PHANTOM V2 —  IR carrier translation
 # ═══════════════════════════════════════════════════════════════════
 
 class DeepPhantomV2:
     """
-    Covert channel engine powered by GraphLang IR.
+    Covert channel engine powered by  IR.
 
-    - parse():  DNS/HTTP/ICMP/WS bytes → GraphLang IR
+    - parse():  DNS/HTTP/ICMP/WS bytes →  IR
     - merge_graphs():  Finds equivalent structure across carriers
-    - synthesize():  GraphLang IR → DNS/HTTP/ICMP/WS bytes
+    - synthesize():   IR → DNS/HTTP/ICMP/WS bytes
 
     Carrier translation = bytes → IR → bytes (different carrier)
-    GraphLang IS the universal intermediate representation.
+     IS the universal intermediate representation.
     """
 
     def __init__(self):
         self.parser = UniversalProtocolParser()
-        self.synthesizer = GraphLangToProtocol()
+        self.synthesizer = ToProtocol()
         self._translations = 0
 
     def translate(self, data: bytes, from_carrier: str, to_carrier: str,
                   host: str = "") -> bytes:
-        """Translate a packet between carriers via GraphLang IR."""
+        """Translate a packet between carriers via  IR."""
         self._translations += 1
         ir = self.parser.parse(data, from_carrier)
         return self.synthesizer.synthesize(ir, to_carrier, host)
 
     def compare_carriers(self, payload: str, carriers: list) -> dict:
-        """GraphLang merge proves which carriers can substitute."""
+        """ merge proves which carriers can substitute."""
         # Build a simple IR for the payload
         g = Graph()
         g.root = "r1"
@@ -275,7 +275,7 @@ class DeepPhantomV2:
         return current
 
     def stats(self) -> dict:
-        return {"translations": self._translations, "engine": "GraphLang IR merge"}
+        return {"translations": self._translations, "engine": " IR merge"}
 
 
 # ═══════════════════════════════════════════════════════════════════
@@ -286,14 +286,14 @@ def demo():
     print("""
 ╔══════════════════════════════════════════════════════════════════╗
 ║    DEEP PHANTOM V2 — GRAPHLANG IR CARRIER TRANSLATION           ║
-║  "Every protocol byte passes through GraphLang merge engine"    ║
+║  "Every protocol byte passes through  merge engine"    ║
 ╚══════════════════════════════════════════════════════════════════╝
 """)
     dp = DeepPhantomV2()
     parser = UniversalProtocolParser()
 
     # Test 1: Parse all protocols to IR
-    print("TEST 1: Parse 4 protocols → GraphLang IR\n")
+    print("TEST 1: Parse 4 protocols →  IR\n")
     samples = {
         "dns": struct.pack(">HHHHHH", 0x1234, 0x0100, 1, 0, 0, 0) +
                b"\x07example\x03com\x00\x00\x10\x00\x01",
@@ -327,7 +327,7 @@ def demo():
     print(f"\nTEST 4: Chain translation dns→icmp→http→ws_ping\n")
     chain = dp.translate_chain(samples["dns"], ["dns", "icmp", "http", "ws_ping"], "target.com")
     print(f"  DNS input ({len(samples['dns'])}B) → 3 hops → WS output ({len(chain)}B)")
-    print(f"  GraphLang IR preserved semantic intent across 3 carrier translations.")
+    print(f"   IR preserved semantic intent across 3 carrier translations.")
 
     print(f"\n{'═' * 70}")
     print(f"✅ {dp.stats()['translations']} translations through {dp.stats()['engine']}")

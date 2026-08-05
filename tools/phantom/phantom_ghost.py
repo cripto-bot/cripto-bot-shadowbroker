@@ -11,9 +11,9 @@ Level 1: HTTP morphing — looks like different browsers           ✅ DONE
 Level 2: Covert channels — no HTTP on the wire at all           ✅ DONE  
 Level 3: Ghost mode — the MACHINE doesn't exist on the network  ← ESTO
 
-Core principle: GraphLang's predictor (314M transitions, converged at 10M)
+Core principle: 's predictor (314M transitions, converged at 10M)
 has modeled the statistical structure of ALL observed software behavior.
-We can REVERSE this: given a target network's traffic baseline, GraphLang
+We can REVERSE this: given a target network's traffic baseline, 
 can GENERATE traffic that is statistically indistinguishable from the
 baseline — while carrying our intent encoded within it.
 
@@ -35,7 +35,7 @@ GHOST MODE CAPABILITIES:
 
   1. BASELINE MIRRORING
      Sample real network traffic → model the distribution → generate
-     traffic that is statistically indistinguishable. GraphLang predictor
+     traffic that is statistically indistinguishable.  predictor
      provides the generative model.
 
   2. DISTRIBUTED PRESENCE
@@ -60,7 +60,7 @@ GHOST MODE CAPABILITIES:
      No state persists between operations. Each "visit" is a completely
      new entity with no connection to previous ones. Nothing to correlate.
 
-Author: Josué Argaña Silguero — GraphLang Ghost Protocol
+Author: Josué Argaña Silguero —  Ghost Protocol
 """
 
 import os
@@ -148,7 +148,7 @@ class BaselineMirror:
     Generates traffic that is statistically indistinguishable from
     a target network's normal baseline.
     
-    Uses GraphLang's statistical knowledge (from 314M transition analysis)
+    Uses 's statistical knowledge (from 314M transition analysis)
     to model and reproduce normal traffic distributions.
     """
     
@@ -768,7 +768,7 @@ def demo_multi_operation():
 
 if __name__ == "__main__":
     import argparse
-    parser = argparse.ArgumentParser(description="GraphLang Ghost Mode — Level 3 Network Invisibility")
+    parser = argparse.ArgumentParser(description=" Ghost Mode — Level 3 Network Invisibility")
     parser.add_argument("--single", action="store_true", help="Single ghost operation demo")
     parser.add_argument("--multi", action="store_true", help="Multi-operation sustained ghost demo")
     
